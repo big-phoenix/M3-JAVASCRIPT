@@ -5,25 +5,74 @@ let ciudad4 = prompt("Indroduc la ciudad4: "); // Introducimos y guardamos los d
 let ciudad5 = prompt("Indroduc la ciudad5: "); // Introducimos y guardamos los datos en la variables
 let ciudad6 = prompt("Indroduc la ciudad6: "); // Introducimos y guardamos los datos en la variables
 
-let arrayCiutats = []; // Array de ciudades
-let arrayCiutatsModificades = []; //Array de de ciudades modicando "a" por "4"
+let barcelonaCiutats = []; // Array de la ciudad
+let madridCiutats = []; // Array de la ciudad
+let valenciaCiutats = []; // Array de la ciudad
+let malagaCiutats = []; // Array de la ciudad
+let cadizCiutats = []; // Array de la ciudad
+let santanderCiutats = []; // Array de la ciudad
 
-document.getElementById("respuesta").innerHTML = ciudad1 +"-"+ ciudad2 +"-"+ ciudad3 +"-"+ ciudad4 +"-"+ ciudad5 +"-"+ ciudad6;
+document.getElementById("respuesta").innerHTML += ciudad1 +"-"+ ciudad2 +"-"+ ciudad3 +"-"+ ciudad4 +"-"+ ciudad5 +"-"+ ciudad6+ ""; // Mostramos ciudades introducidas
 
-/***************************************************** Fase 3 *******************************************************************/
+/****************************************************************************** Fase 4 **********************************************************************/
 
-arrayCiutats.push(ciudad1); // Agregamos la ciudade al array de Ciudades
-arrayCiutats.push(ciudad2); // Agregamos la ciudade al array de Ciudades
-arrayCiutats.push(ciudad3); // Agregamos la ciudade al array de Ciudades
-arrayCiutats.push(ciudad4); // Agregamos la ciudade al array de Ciudades
-arrayCiutats.push(ciudad5); // Agregamos la ciudade al array de Ciudades
-arrayCiutats.push(ciudad6); // Agregamos la ciudade al array de Ciudades
+for(i=0; i<ciudad1.length; i++){ // Guardamos letgra por letra en el array de la ciudad
+    barcelonaCiutats.push(ciudad1.charAt(i));
+}
+
+for(i=0; i<ciudad2.length; i++){ // Guardamos letgra por letra en el array de la ciudad
+    madridCiutats.push(ciudad2.charAt(i));
+}
+
+for(i=0; i<ciudad3.length; i++){ // Guardamos letgra por letra en el array de la ciudad
+    valenciaCiutats.push(ciudad3.charAt(i));
+}
+
+for(i=0; i<ciudad4.length; i++){ // Guardamos letgra por letra en el array de la ciudad
+    malagaCiutats.push(ciudad4.charAt(i));
+}
+
+for(i=0; i<ciudad5.length; i++){ // Guardamos letgra por letra en el array de la ciudad
+    cadizCiutats.push(ciudad5.charAt(i));
+}
+
+for(i=0; i<ciudad6.length; i++){ // Guardamos letgra por letra en el array de la ciudad
+    santanderCiutats.push(ciudad6.charAt(i));
+}
 
 
-    for(ciudad of arrayCiutats){
-        arrayCiutatsModificades.push(ciudad.replace(/a/g,"4")); // Guardamos en la nueva Array el resultado de la modificacion
-    }
+document.getElementById("respuesta").innerHTML += "<br><br>"; // Pintamos espacio en el maquetado
 
-arrayCiutatsModificades.sort(); // Ordenamos alfanumerico
+for(i=barcelonaCiutats.length-1; i>=0; i--){ // Bucle para mostras array al reves
+    document.getElementById("respuesta").innerHTML += "<b>" +barcelonaCiutats[i];
+}
 
-document.getElementById("respuesta").innerHTML += "<br><br><b>" +arrayCiutatsModificades; //Mostramos por pantalla
+document.getElementById("respuesta").innerHTML += "<br><br>"; // Pintamos espacio en el maquetado
+
+for(i=madridCiutats.length-1; i>=0; i--){ // Bucle para mostras array al reves
+    document.getElementById("respuesta").innerHTML += "<b>" +madridCiutats[i];
+}
+
+document.getElementById("respuesta").innerHTML += "<br><br>"; // Pintamos espacio en el maquetado
+
+for(i=valenciaCiutats.length-1; i>=0; i--){ // Bucle para mostras array al reves
+    document.getElementById("respuesta").innerHTML += "<b>" +valenciaCiutats[i]; 
+}
+
+document.getElementById("respuesta").innerHTML += "<br><br>"; // Pintamos espacio en el maquetado
+
+for(i=malagaCiutats.length-1; i>=0; i--){ // Bucle para mostras array al reves
+    document.getElementById("respuesta").innerHTML += "<b>" +malagaCiutats[i];
+}
+
+document.getElementById("respuesta").innerHTML += "<br><br>"; // Pintamos espacio en el maquetado
+
+for(i=cadizCiutats.length-1; i>=0; i--){ // Bucle para mostras array al reves
+    document.getElementById("respuesta").innerHTML += "<b>" +cadizCiutats[i];
+}
+
+document.getElementById("respuesta").innerHTML += "<br><br>"; // Pintamos espacio en el maquetado
+
+for(i=santanderCiutats.length-1; i>=0; i--){ // Bucle para mostras array al reves
+    document.getElementById("respuesta").innerHTML += "<b>" +santanderCiutats[i];
+}
